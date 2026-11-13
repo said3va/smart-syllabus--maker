@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Syllabus AI</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js"></script>
+</head>
+<body>
+  <header>
+    <h1>🎓 Smart Syllabus AI</h1>
+    <p>Your personal AI-powered study assistant</p>
+  </header>
+
+  <main>
+    <section class="card">
+      <h2>📚 Upload Your Syllabus</h2>
+      <p>Upload an image or PDF of your syllabus.</p>
+      <input type="file" id="syllabusFile" accept=".pdf,image/*">
+      <button onclick="extractSyllabus()">Extract Syllabus</button>
+      <p id="uploadStatus"></p>
+      <textarea id="syllabusText" placeholder="Your syllabus text will appear here..."></textarea>
+      <button onclick="organizeSyllabus()">Organize Syllabus</button>
+    </section>
+
+    <section class="card">
+      <h2>📖 Study Material</h2>
+      <input id="topic" placeholder="Enter subject or topic">
+      <select id="materialType">
+        <option value="notes">Study Notes</option>
+        <option value="short">Short Questions</option>
+        <option value="long">Long Questions</option>
+        <option value="mcq">MCQ Questions</option>
+        <option value="important">Important Topics</option>
+      </select>
+      <button onclick="generateMaterial()">Generate</button>
+      <div id="materialOutput" class="output"></div>
+    </section>
+
+    <section class="card">
+      <h2>📝 Mock Exam</h2>
+      <input id="examSubject" placeholder="Enter subject">
+      <input id="examTopic" placeholder="Enter topic">
+      <button onclick="generateExam()">Generate Mock Exam</button>
+      <div id="examOutput" class="output"></div>
+    </section>
+
+    <section class="card">
+      <h2>✍️ Answer Evaluator</h2>
+      <textarea id="studentAnswer" placeholder="Paste your answer here..."></textarea>
+      <button onclick="evaluateAnswer()">Evaluate Answer</button>
+      <div id="gradeOutput" class="output"></div>
+    </section>
+
+    <section class="card">
+      <h2>📊 Study Progress</h2>
+      <p>Topics studied: <strong id="progressCount">0</strong></p>
+      <button onclick="markStudied()">Mark One Topic Completed</button>
+      <button class="secondary" onclick="resetProgress()">Reset Progress</button>
+    </section>
+  </main>
+
+  <footer>Smart Syllabus AI © 2026</footer>
+  <script src="script.js"></script>
+</body>
+</html>
+  
