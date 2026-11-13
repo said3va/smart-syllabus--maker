@@ -1,0 +1,102 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f1f5f9;
+  color: #172554;
+}
+
+header {
+  text-align: center;
+  padding: 35px 15px;
+  background: linear-gradient(135deg, #1d4ed8, #6d28d9);
+  color: white;
+}
+
+header h1 {
+  margin: 0 0 10px;
+  font-size: 32px;
+}
+
+main {
+  max-width: 900px;
+  margin: 25px auto;
+  padding: 0 15px;
+}
+
+.card {
+  background: white;
+  padding: 24px;
+  margin-bottom: 22px;
+  border-radius: 14px;
+  box-shadow: 0 4px 15px #0000000c;
+}
+
+h2 {
+  color: #1d4ed8;
+}
+
+input, select, textarea {
+  display: block;
+  width: 100%;
+  padding: 13px;
+  margin: 12px 0;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 15px;
+}
+
+textarea {
+  min-height: 130px;
+  resize: vertical;
+}
+
+button {
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin: 5px 5px 5px 0;
+  font-size: 15px;
+}
+
+button:hover {
+  background: #1e40af;
+}
+
+button.secondary {
+  background: #64748b;
+}
+
+.output {
+  white-space: pre-wrap;
+  line-height: 1.7;
+  margin-top: 15px;
+  padding: 15px;
+  background: #eff6ff;
+  border-radius: 8px;
+  overflow-wrap: anywhere;
+}
+
+footer {
+  text-align: center;
+  padding: 25px;
+  color: #64748b;
+}
+
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 25px;
+  }
+
+  .card {
+    padding: 17px;
+  }
+}
+  
